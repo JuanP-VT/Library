@@ -27,14 +27,23 @@ function addBook(ev){
     const iconSee = document.createElement('img')
     iconSee.src = "./icons/eye.png"
     iconSee.classList.add('icon')
+    const currentBooks = myLibrary.length
+    iconSee.addEventListener('click',() =>{
+        console.log(currentBooks)
+        if (myLibrary[currentBooks].read == true){
+            myLibrary[currentBooks].read = false
+        }
+        else if (myLibrary[currentBooks].read == false){
+            myLibrary[currentBooks].read = true
+        }
 
-    
+    })
     const iconDelete = document.createElement('img')
     //Inserts icon with event to remove this div and object
     iconDelete.src ='./icons/delete.png'
     iconDelete.addEventListener('click',() =>{
-        const el = document.getElementById(book.id)
-        const removeIndex = myLibrary.map(item => item.id).indexOf(book.id);
+        const el = document.getElementById(book.name)
+        const removeIndex = myLibrary.map(item => item.id).indexOf(book.name);
         ~removeIndex && myLibrary.splice(removeIndex, 1);
         el.remove();
     })
