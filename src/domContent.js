@@ -44,5 +44,5 @@ footer.appendChild($bookRead);
 card.appendChild(footer);
 export {
   card, eye, deleteImg, $bookName, $bookAuthor,
-  $bookPages, $bookRead,
+  $bookPages, $bookRead, imageContainer,
 };

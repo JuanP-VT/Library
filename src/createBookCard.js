@@ -1,6 +1,6 @@
 import {
   card, eye, deleteImg, $bookName, $bookAuthor,
-  $bookPages, $bookRead,
+  $bookPages, $bookRead, imageContainer,
 } from './domContent';
 
 function createBookCard(element) {
@@ -10,6 +10,7 @@ function createBookCard(element) {
   $bookName.textContent = element.name;
   $bookAuthor.textContent = element.author;
   $bookPages.textContent = element.pages;
+  imageContainer.setAttribute('data-reference', element.id);
   if (element.read === false) {
     $bookRead.textContent = 'Not Read Yet';
   } else if (element.read === true) {

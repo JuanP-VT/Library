@@ -2,6 +2,7 @@
 import addEventListenerToCard from './addEventListenerToCard';
 import clearScreen from './clearScreen';
 import createBookCard from './createBookCard';
+import loadBookCardImages from './loadBookcardImages';
 
 function displayBooks() {
   clearScreen();
@@ -13,6 +14,7 @@ function displayBooks() {
     content.appendChild(bookCard.cloneNode(true));
   });
   addEventListenerToCard();
+  loadBookCardImages();
 }
 
 export default displayBooks;
