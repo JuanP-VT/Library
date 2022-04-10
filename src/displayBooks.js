@@ -1,3 +1,4 @@
+import addEventListenerToCard from './addEventListenerToCard';
 import clearScreen from './clearScreen';
 import createBookCard from './img/createBookCard';
 
@@ -8,9 +9,9 @@ function displayBooks() {
   const myStorage = JSON.parse(localStorage.getItem('StoredBooks'));
   myStorage.forEach((element) => {
     const bookCard = createBookCard(element);
-    console.log(bookCard);
     content.appendChild(bookCard.cloneNode(true));
   });
+  addEventListenerToCard();
 }
 
 export default displayBooks;

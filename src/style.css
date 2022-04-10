@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Gideon Roman', cursive;
     /* font-family: 'Rubik Moonrocks', cursive; */
     font-weight: 500;
@@ -45,7 +45,7 @@ button:hover{
 }
 #content{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 30% 30% 30%;
     width: 85%;
     border: 1px solid black;
     padding: 90px;
@@ -84,4 +84,8 @@ button:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+p{
+    display: flex;
 }

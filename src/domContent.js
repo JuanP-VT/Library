@@ -9,9 +9,12 @@ header.classList.add('cardHeader');
 const eye = new Image();
 eye.src = eyeIcon;
 eye.classList.add('icon');
+eye.classList.add('eye');
 const deleteImg = new Image();
 deleteImg.src = deleteIcon;
 deleteImg.classList.add('icon');
+deleteImg.classList.add('delete');
+
 header.appendChild(eye);
 header.appendChild(deleteImg);
 card.appendChild(header);

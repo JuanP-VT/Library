@@ -4,15 +4,14 @@ import {
 } from '../domContent';
 
 function createBookCard(element) {
-  console.log(element);
+  // Change text content of the card
   deleteImg.setAttribute('data-reference', element.id);
   eye.setAttribute('data-reference', element.id);
   $bookName.textContent = element.name;
   $bookAuthor.textContent = element.author;
   $bookPages.textContent = element.pages;
-  console.log(element.read);
   if (element.read === false) {
-    $bookRead.textContent = 'Not read';
+    $bookRead.textContent = 'Not Read Yet';
   } else if (element.read === true) {
     $bookRead.textContent = 'Book Completed';
   }

@@ -1,8 +1,6 @@
-import { card } from './domContent';
+import displayBooks from './displayBooks';
 import initPage from './initPage';
 import './style.css';
 
 initPage();
-
-const content = document.querySelector('#content');
-content.appendChild(card);
+displayBooks();
