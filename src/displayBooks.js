@@ -1,6 +1,7 @@
+// eslint-disable-next-line import/no-cycle
 import addEventListenerToCard from './addEventListenerToCard';
 import clearScreen from './clearScreen';
-import createBookCard from './img/createBookCard';
+import createBookCard from './createBookCard';
 
 function displayBooks() {
   clearScreen();

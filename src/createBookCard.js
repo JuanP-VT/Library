@@ -1,7 +1,7 @@
 import {
   card, eye, deleteImg, $bookName, $bookAuthor,
   $bookPages, $bookRead,
-} from '../domContent';
+} from './domContent';
 
 function createBookCard(element) {
   // Change text content of the card
