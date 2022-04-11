@@ -17,6 +17,21 @@ html {
 label, input{
     display: block;
 }
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#homeTitle{
+    font-family: 'Rubik Moonrocks', cursive;
+    font-size: 2rem;
+    color: aquamarine;
+}
+.homebutton{
+    width: 50%;
+    background-color: rgba(28, 51, 45, 0.5);
+    font-size: 0.8rem;
+}
 #separator{
     margin-top: 20px;
 }

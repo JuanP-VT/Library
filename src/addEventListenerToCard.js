@@ -2,7 +2,9 @@
 import changeViewStatus from './changeReadStatus';
 import deleteBook from './deleteBook';
 
-function addEventListenerToCard() {
+function addEventListenerToCard(mode) {
+  console.log(mode);
+
   const eyeIcons = [...document.querySelectorAll('.eye')];
   eyeIcons.forEach((element) => {
     element.addEventListener('click', changeViewStatus);

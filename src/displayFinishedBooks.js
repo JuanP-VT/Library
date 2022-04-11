@@ -1,25 +1,25 @@
-/* eslint-disable eqeqeq */
-// eslint-disable-next-line import/no-cycle
+/* eslint-disable import/no-cycle */
 import addEventListenerToCard from './addEventListenerToCard';
+import loadBookCardImages from './loadBookcardImages';
 import clearScreen from './clearScreen';
 import createBookCard from './createBookCard';
-import loadBookCardImages from './loadBookcardImages';
 
-function displayBooks() {
+function displayFinishedBooks() {
   clearScreen();
   // Get local storage key and append each book to a DOM element
   // If local storage is empty
-  if (localStorage.getItem('StoredBooks') == '') {
+  if (localStorage.getItem('StoredBooks') === '') {
     return;
   }
   const content = document.querySelector('#content');
   const myStorage = JSON.parse(localStorage.getItem('StoredBooks'));
   myStorage.forEach((element) => {
-    const bookCard = createBookCard(element);
-    content.appendChild(bookCard.cloneNode(true));
+    if (element.read === true) {
+      const bookCard = createBookCard(element, 'finished');
+      content.appendChild(bookCard.cloneNode(true));
+    }
   });
-  addEventListenerToCard();
+  addEventListenerToCard('finished');
   loadBookCardImages();
 }
-
-export default displayBooks;
+export default displayFinishedBooks;

@@ -1,7 +1,11 @@
 /* eslint-disable import/no-cycle */
 import displayBooks from './displayBooks';
+import displayFinishedBooks from './displayFinishedBooks';
+import displayUnfinishedBooks from './displayUnfinishedBooks';
 
-function changeViewStatus() {
+function changeViewStatus(mode) {
+  const btnMode = mode.target.getAttribute('data-mode');
+  console.log(btnMode);
   const dataReference = this.getAttribute('data-reference');
   console.log(dataReference);
   // Get local storage item
@@ -17,7 +21,15 @@ function changeViewStatus() {
   }
   console.log(myBooks[targetIndex].read);
   localStorage.setItem('StoredBooks', JSON.stringify(myBooks));
-  displayBooks();
+  if (btnMode === '' || btnMode === null || btnMode === undefined) {
+    displayBooks();
+  }
+  if (btnMode === 'finished') {
+    displayFinishedBooks();
+  }
+  if (btnMode === 'unfinished') {
+    displayUnfinishedBooks();
+  }
 }
 
 export default changeViewStatus;

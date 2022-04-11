@@ -3,7 +3,7 @@ import {
   $bookPages, $bookRead, imageContainer,
 } from './domContent';
 
-function createBookCard(element) {
+function createBookCard(element, mode) {
   // Change text content of the card
   deleteImg.setAttribute('data-reference', element.id);
   eye.setAttribute('data-reference', element.id);
@@ -15,6 +15,15 @@ function createBookCard(element) {
     $bookRead.textContent = 'Not Read Yet';
   } else if (element.read === true) {
     $bookRead.textContent = 'Book Completed';
+  }
+  if (mode === null || mode === '' || mode === undefined) {
+    eye.setAttribute('data-mode', '');
+  }
+  if (mode === 'finished') {
+    eye.setAttribute('data-mode', 'finished');
+  }
+  if (mode === 'unfinished') {
+    eye.setAttribute('data-mode', 'unfinished');
   }
   return card;
 }
