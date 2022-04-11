@@ -18,12 +18,15 @@ function createBookCard(element, mode) {
   }
   if (mode === null || mode === '' || mode === undefined) {
     eye.setAttribute('data-mode', '');
+    deleteImg.setAttribute('data-mode', '');
   }
   if (mode === 'finished') {
     eye.setAttribute('data-mode', 'finished');
+    deleteImg.setAttribute('data-mode', 'finished');
   }
   if (mode === 'unfinished') {
     eye.setAttribute('data-mode', 'unfinished');
+    deleteImg.setAttribute('data-mode', 'unfinished');
   }
   return card;
 }
