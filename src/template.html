@@ -9,18 +9,33 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Rubik+Moonrocks&display=swap');
         </style>
+        <script src="https://kit.fontawesome.com/f6bcbfcfce.js" crossorigin="anonymous"></script>
         </head>
 <body>
         <div id="main">
             <div id="sidebar">
-                <form>
-                    <label for="bookName">Book Name</label>
-                    <input type="text" id="bookName">
-                    <label for="bookAuthor">Book Author</label>
-                    <input type="text" id="bookAuthor">
+                <form id="mainForm">
+                    <div class="formControl">
+                        <div class="inputBox">
+                            <label for="bookName"  >Book Name</label>
+                            <input type="text" id="bookName" name="bookName" >
+                            <i class="fa-solid fa-check checker" ></i>
+                            <i class="fa-solid fa-xmark checker" ></i>
+                        </div>
+                        <small> error message</small>
+                    </div>
+                    <div class="formControl">
+                        <div class="inputBox">
+                            <label for="bookAuthor" >Book Author</label>
+                            <input type="text" id="bookAuthor" >
+                            <i class="fa-solid fa-check checker" ></i>
+                            <i class="fa-solid fa-xmark checker" ></i>
+                        </div>
+                        <small> error message</small>
+                    </div>
                     <label for="bookPages">Number of pages</label>
                     <input type="text" id="bookPages">
-                    <label for="imgUrl">Link of book's cover</label>
+                    <label for="imgUrl " id="separator">Link of book's cover</label>
                     <input type="url" id="imgUrl">
                     <button id="submit"> Submit</button>
                 </form>

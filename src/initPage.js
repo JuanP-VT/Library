@@ -5,8 +5,8 @@ function initPage() {
   // Create key in local storage to save books
   initStorage();
   // Add event listener to capture user input
-  const submitBtn = document.querySelector('#submit');
-  submitBtn.addEventListener('click', captureInput);
+  const mainForm = document.querySelector('#mainForm');
+  mainForm.addEventListener('submit', captureInput);
 }
 
 export default initPage;

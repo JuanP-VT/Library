@@ -17,6 +17,9 @@ html {
 label, input{
     display: block;
 }
+#separator{
+    margin-top: 20px;
+}
 input{
     border-radius: 5px;
     height: 25px;
@@ -29,6 +32,31 @@ form{
     padding: 10px;
     border: 1px solid black;
 
+}
+small{
+    font-size: 0.8rem;
+    opacity: 0;
+}
+.error{
+    border-color: red;
+    opacity: 1 !important;
+    color: red;
+}
+.success{
+    border: green;
+    opacity: 1 !important;
+    color: green;
+}
+
+
+.inputBox{
+    position: relative;
+}
+.checker{
+position:  absolute;
+top: 50%;
+right: 15px;
+opacity: 0;
 }
 #main{
     position: relative;
@@ -116,3 +144,6 @@ transform: scale(1.1);
 p{
     display: flex;
 }
+.fa-circle-xmark{
+color: white
+;}
