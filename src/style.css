@@ -29,8 +29,7 @@ input{
     background-color: rgba(0, 0, 0, 0.8);
 }
 form{
-    padding: 10px;
-    border: 1px solid black;
+    padding: 20px;
 
 }
 small{
@@ -88,9 +87,8 @@ button:hover{
 }
 #content{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
     width: 85%;
-    border: 1px solid black;
     padding: 80px;
     gap: 50px;
 }

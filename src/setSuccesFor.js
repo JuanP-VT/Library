@@ -7,7 +7,7 @@ function setSuccesFor(input) {
   small.classList.remove('error');
   input.classList.remove('error');
   Xmark.classList.remove('error');
-  // Adding succes class
+  // Adding success class
   input.classList.add('success');
   check.classList.add('success');
 }

@@ -1,7 +1,7 @@
 function saveToLocalStorage(object) {
   // Get local storage key
   // Logic to manage entry when local this local storage key is empty
-  if (localStorage.getItem('StoredBooks') === null) {
+  if (localStorage.getItem('StoredBooks') === '') {
     const myBooks = [];
     myBooks.push(object);
     localStorage.setItem('StoredBooks', JSON.stringify(myBooks));
