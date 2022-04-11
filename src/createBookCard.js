@@ -7,6 +7,7 @@ function createBookCard(element, mode) {
   // Change text content of the card
   deleteImg.setAttribute('data-reference', element.id);
   eye.setAttribute('data-reference', element.id);
+  eye.setAttribute('alt', 'Switch Books Completion Status');
   $bookName.textContent = element.name;
   $bookAuthor.textContent = element.author;
   $bookPages.textContent = element.pages;

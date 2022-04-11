@@ -15,7 +15,7 @@ function displayUnfinishedBooks() {
   const myStorage = JSON.parse(localStorage.getItem('StoredBooks'));
   myStorage.forEach((element) => {
     if (element.read === false) {
-      const bookCard = createBookCard(element, 'finished');
+      const bookCard = createBookCard(element, 'unfinished');
       content.appendChild(bookCard.cloneNode(true));
     }
   });
