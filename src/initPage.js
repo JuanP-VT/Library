@@ -1,5 +1,6 @@
 import captureInput from './captureInput';
 import displayBooks from './displayBooks';
+import displayDemoPage from './displayDemoPage';
 import displayFinishedBooks from './displayFinishedBooks';
 import displayUnfinishedBooks from './displayUnfinishedBooks';
 import initStorage from './initStorage';
@@ -17,6 +18,9 @@ function initPage() {
   finishBtn.addEventListener('click', displayFinishedBooks);
   const unFinishedBtn = document.querySelector('#unfinished');
   unFinishedBtn.addEventListener('click', displayUnfinishedBooks);
+  // Demo
+  const demoBtn = document.querySelector('#demo');
+  demoBtn.addEventListener('click', displayDemoPage);
 }
 
 export default initPage;
